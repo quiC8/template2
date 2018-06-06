@@ -1,0 +1,98 @@
+@mixin background-size($size){
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: $size;
+}
+
+@mixin position-full(){
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin position-all($top, $right, $bottom, $left){
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin position-center-middle(){
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin position-left-middle(){
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+@mixin position-right-middle(){
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+@mixin position-over-left-middle($m_right){
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-right: $m_right;
+  transform: translateY(-50%);
+}
+
+@mixin position-over-right-middle($m_left){
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-left: $m_left;
+  transform: translateY(-50%);
+}
+@mixin position($type: null, $top: null, $right: null, $bottom: null, $left: null, $index: null) {
+  position: $type;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  z-index: $index;
+}
+
+@mixin row-padding($number) {
+  margin-right: - $number + px;
+  margin-left: - $number + px;
+  > * {
+    padding-right: $number + px;
+    padding-left: $number +px;
+  }
+}
+
+%add-tr {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+@function grayscale($value) {
+  @return #{ "grayscale(" + $value + ")" };
+}
+
+
+@mixin sizeEx($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin font($name: $font-family-sans-serif, $size: $font-size-base, $color: $text-color, $weight: normal, $style: normal) {
+  font-family: $name;
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+  font-style: $style;
+}
+

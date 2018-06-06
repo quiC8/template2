@@ -1,0 +1,13 @@
+{% from 'macros/form.html' import formBlock, formHorizontal, select, selectHorizontal, textarea, textareaHorizontal %} {%
+from 'macros/helpers.html' import image %} {% extends 'layouts/application.html' %}{% block bodyClass %}class="internal"{%
+endblock %} {% block content %}
+<main id="main-content">
+  <form id="contactForm" name="contactForm" method="POST" action="/api/contact">
+    {{ formBlock('Name', 'number', 'Name', id='name', message='Vui lòng nhập thông tin') }} {{ formBlock('Email', 'text', 'Email',
+    id='email', message='Vui lòng nhập thông tin') }} {{ select('Tỉnh / Thành', 'Email', id='address', message='Vui lòng
+    nhập thông tin') }} {{ textarea('Message', 'text', id='message', message='Vui lòng nhập thông tin') }}
+
+    <button type="button" class="btn btn-success">Submit</button>
+  </form>
+</main>
+{% endblock %}

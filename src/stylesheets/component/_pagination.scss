@@ -1,0 +1,50 @@
+.mod-pagination {
+  ul {
+    margin: 3px 0 48px;
+    &::after {
+      display: table;
+      clear: both;
+      content: "";
+    }
+  }
+  li {
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #cbd1d5;
+    text-transform: uppercase;
+    vertical-align: top;
+    &::before {
+      display: none;
+    }
+    a {
+      display: block;
+      float: none;
+      height: 50px;
+      padding: 11px 20px;
+      font-style: normal;
+      color: inherit !important;
+      text-align: center;
+      text-decoration: none;
+      background-color: transparent !important;
+      border: 1px solid !important;
+      border-radius: 0% !important;
+      transition: .25s all;
+      &:hover {
+        color: $link-color !important;
+        border-color: $link-color !important;
+        transition: .25s all;
+      }
+    }
+    &.active {
+      a {
+        color: $link-color !important;
+        border-color: $link-color !important;
+        transition: .25s all;
+      }
+    }
+  }
+}

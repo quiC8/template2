@@ -1,0 +1,10 @@
+{% extends 'layouts/application.html' %}
+{% block bodyClass %}class="internal"{% endblock %}
+{% block content %}
+{% set blog = require('blog') %}
+
+<main id="main-content" data-module="Slickslide">
+{{title}}
+<h1>{{ title }}</h1>
+</main>
+{% endblock %}

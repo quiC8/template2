@@ -1,0 +1,37 @@
+---
+author: Frontend Team
+ourTeam: My Team
+---
+{% extends 'layouts/application.html' %}{% block bodyClass %}class="page-home"{% endblock %}{% block content %}
+<main id="main-content">
+	<div class="space-100"></div>
+	<div class="container">
+		<h1>{{ author }} {{ title }}</h1>
+		<h2>H2 Lorem Ipsum is simply dummy text 4</h2>
+		<h3>H3 Lorem Ipsum is simply <a href="#">text of the printing</a></h3>
+		<h4>H4 Lorem Ipsum is simply dummy text</h4>
+		<h5>H5 Lorem Ipsum is simply dummy text</h5>
+		<h6>H6 Lorem Ipsum is simply dummy text</h6>
+		<P>
+			Lorem Ipsum is simply dummy <a href="#">text of the printing</a> and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries
+		</P>
+		<ul>
+			<li>Lorem Ipsum is simply dummy text of the printing</li>
+			<li>Lorem Ipsum is simply dummy text of the printing</li>
+			<li>Lorem Ipsum is simply dummy text of the printing</li>
+			<li>Lorem Ipsum is simply dummy text of the printing</li>
+			<li>Lorem Ipsum is simply dummy text of the printing</li>
+			<li>Lorem Ipsum is simply dummy text of the printing</li>
+		</ul>
+		<ol>
+			<li>Lorem Ipsum is simply dummy text of the printing</li>
+			<li>Lorem Ipsum is simply dummy text of the printing</li>
+			<li>Lorem Ipsum is simply dummy text of the printing</li>
+			<li>Lorem Ipsum is simply dummy text of the printing</li>
+			<li>Lorem Ipsum is simply dummy text of the printing</li>
+			<li>Lorem Ipsum is simply dummy text of the printing</li>
+    </ol>
+	</div>
+</main>
+{% include "modules/component/loading.html" %}
+{% endblock %}

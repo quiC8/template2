@@ -1,0 +1,12 @@
+--- title: Our People body: --- {% extends 'layouts/application.html' %}{% block bodyClass %}class="home-page"{% endblock
+%}{% block content %}
+<main id="main-content">
+  {{ title }}
+  <div>
+    {{ body }}
+  </div>
+</main>
+<div>
+  {% include "modules/counter.html" %}
+</div>
+{% include "modules/component/loading.html" %} {% endblock %}

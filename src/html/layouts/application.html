@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0"/>
+    <title>{% block title %}{{ title }}{% endblock %}</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="format-detection" content="telephone=no">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,800|Ubuntu:400,400i,500,500i,700,700i|Montserrat:300,400,400i,500,600,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/app.css">
+    <link rel="stylesheet" media="print" href="stylesheets/print.css">
+    {% block head %}{% endblock %}
+</head>
+<body {% block bodyClass %}{% endblock %}>
+    <div id="wrapper">
+        {% block header %}
+        {% include "modules/header.html" %}
+        {% endblock %}
+        {% block content %}
+        {% endblock %}
+        {% block footer %}
+        {% include "modules/footer.html" %}
+        {% endblock %}
+        {% block javascript %}
+        {% include "modules/javascript.html" %}
+        {% endblock %}
+    </div>
+</body>
+</html>
